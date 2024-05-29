@@ -25,7 +25,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: web-server:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/web-server:latest
 
       - name: SSH to Digital Ocean droplet and deploy
         uses: appleboy/ssh-action@master
