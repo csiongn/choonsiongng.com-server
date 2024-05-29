@@ -40,4 +40,4 @@ jobs:
             docker stop web-server || true
             docker rm web-server || true
             docker rmi ${{ secrets.DOCKERHUB_USERNAME }}/web-server
-            docker run -d --name web-server -p 80:80 -e MONEY_MANAGER_ADDRESS=${{ secrets.MONEY_MANAGER_ADDRESS }} -e PERSONAL_WEBSITE_ADDRESS=${{ secrets.PERSONAL_WEBSITE_ADDRESS }} ${{ secrets.DOCKERHUB_USERNAME }}/web-server:latest web-server
+            docker run -d --name web-server -p 80:80 -e MONEY_MANAGER_ADDRESS=${{ secrets.MONEY_MANAGER_ADDRESS }} -e PERSONAL_WEBSITE_ADDRESS=${{ secrets.PERSONAL_WEBSITE_ADDRESS }} ${{ secrets.DOCKERHUB_USERNAME }}/web-server:latest
