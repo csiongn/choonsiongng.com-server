@@ -33,7 +33,8 @@ jobs:
         with:
           host: ${{ secrets.DIGITAL_OCEAN_IP }}
           username: ${{ secrets.DIGITAL_OCEAN_USERNAME }}
-          key: ${{ secrets.DIGITIAL_OCEAN_SSH_KEY }}
+          key: ${{ secrets.DIGITAL_OCEAN_SSH_KEY }}
+          passphrase: ${{ secrets.DIGITAL_OCEAN_KEY_PASSPHRASE }}
           fingerprint: ${{ secrets.DIGITAL_OCEAN_FINGERPRINT }}
           script: |
             docker pull web-server:latest
